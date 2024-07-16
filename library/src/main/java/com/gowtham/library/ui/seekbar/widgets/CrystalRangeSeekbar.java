@@ -937,7 +937,10 @@ public class CrystalRangeSeekbar extends View {
             addFixGap(true);
         }
         else{
-            addMinGap();
+            if (normalizedMaxValue - value > gap && normalizedMinValue > 0) {
+                normalizedMaxValue = value + gap;
+            }
+//            addMinGap();
         }
         invalidate();
     }
@@ -948,7 +951,10 @@ public class CrystalRangeSeekbar extends View {
             addFixGap(false);
         }
         else{
-            addMaxGap();
+            if (value - normalizedMinValue > gap && normalizedMaxValue < 100) {
+                normalizedMinValue = value - gap;
+            }
+            //            addMaxGap(true);
         }
         invalidate();
     }
