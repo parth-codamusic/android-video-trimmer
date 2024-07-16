@@ -738,7 +738,7 @@ public class CrystalRangeSeekbar extends View {
         //float leftL = normalizedToScreen(normalizedMinValue);
         //float rightL = Math.min(leftL + thumbHalfWidth + barPadding, getWidth());
         rectLeftThumb.left   = normalizedToScreen(normalizedMinValue);
-        rectLeftThumb.right  = Math.min(rectLeftThumb.left + (getThumbWidth() / 2) + barPadding, getWidth());
+        rectLeftThumb.right  = Math.min(rectLeftThumb.left + getThumbWidth() + barPadding, getWidth());
         rectLeftThumb.top    = 0f;
         rectLeftThumb.bottom = thumbHeight;
 
@@ -767,7 +767,7 @@ public class CrystalRangeSeekbar extends View {
         //float leftR = normalizedToScreen(normalizedMaxValue);
         //float rightR = Math.min(leftR + thumbHalfWidth + barPadding, getWidth());
         rectRightThumb.left = normalizedToScreen(normalizedMaxValue);
-        rectRightThumb.right = Math.min(rectRightThumb.left + (getThumbWidth() / 2) + barPadding, getWidth());
+        rectRightThumb.right = Math.min(rectRightThumb.left + getThumbWidth() + barPadding, getWidth());
         rectRightThumb.top = 0f;
         rectRightThumb.bottom = thumbHeight;
 

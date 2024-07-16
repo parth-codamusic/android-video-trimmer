@@ -164,6 +164,7 @@ public class ActVideoTrimmer extends LocalizationActivity {
         txtStartDuration = findViewById(R.id.txt_start_duration);
         txtEndDuration = findViewById(R.id.txt_end_duration);
         seekbarController = findViewById(R.id.seekbar_controller);
+        seekbarController.setEnabled(false);
         progressBar = findViewById(R.id.progress_circular);
         ImageView imageOne = findViewById(R.id.image_one);
         ImageView imageTwo = findViewById(R.id.image_two);
