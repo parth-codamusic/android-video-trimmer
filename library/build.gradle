@@ -37,6 +37,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    kotlin {
+        jvmToolchain(17)
+    }
     namespace 'com.gowtham.library'
 
 }
@@ -46,8 +49,9 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
-    implementation 'com.arthenica:ffmpeg-kit-min:6.0-1'
     implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation files('libs/ffmpeg-kit-full-gpl.aar')
+    implementation 'com.arthenica:smart-exception-java:0.2.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
     implementation 'com.akexorcist:localization:1.2.9'
     implementation 'com.google.code.gson:gson:2.9.0'
